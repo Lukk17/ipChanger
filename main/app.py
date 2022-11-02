@@ -6,14 +6,14 @@ from main.interfaces_setup import change_ip_dns, restore_automatic
 lan_names = discover_lan_names()
 wlan_names = discover_wifi_names()
 
-print(lan_names)
-print(wlan_names)
+# print(lan_names)
+# print(wlan_names)
 
 
 def make_change():
     interface_name = interfaces_list.get(interfaces_list.curselection())
     subnet = subnet_entry.get()
-    print(f"Making cahnge to interface {interface_name} and subnet {subnet}")
+    print(f"Making change to interface {interface_name} and subnet {subnet}")
     change_ip_dns(interface_name, subnet)
 
 
